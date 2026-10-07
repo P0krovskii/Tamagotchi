@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Tamagotchi/Tamagotchi.vcxproj" />
+  <Project Path="E:/Projects/Tamagotchi/Tamagotchi/Tamagotchi/Tamagotchi.vcxproj" Id="cfc19d04-1efe-4f3d-ad4a-38efdd4f944f" />
 </Solution>

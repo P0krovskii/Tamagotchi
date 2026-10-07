@@ -1,65 +1,64 @@
 ﻿#include <cstdint>
 #include <iostream>
+#include "Tamagotchi.h"
 
-class Tamagotchi {
-private:
-	uint8_t Health;
-	uint8_t Satiety;
-	uint8_t Happiness;
-	uint8_t Cleanliness;
-
-protected:
-
-public:
-	Tamagotchi(uint8_t health, uint8_t satiety, uint8_t happiness, uint8_t cleanliness)
-	{
-		Health = health;
-		Satiety = satiety;
-		Happiness = happiness;
-		Cleanliness = cleanliness;
-	}
-	
-	void getter() {
-		printf("Health = %d Satiety = %d Happiness = %d Cleanliness = %d\n", Health, Satiety, Happiness, Cleanliness );
-	};
-
-	void feed() {
-		Satiety += 3;
-		Cleanliness -= 10;
-		if (Satiety > 100) Satiety = 100;
-	};
-
-	void heal() {
-		Health += 5;
-		if (Health > 100) Health = 100;
-	};
-
-	void play() {
-		Happiness += 5;
-		Satiety -= 15;
-		if (Happiness > 100) Happiness = 100;
-	};
-
-	void wash() {
-		Happiness -= 3;
-		Cleanliness += 25;
-		if (Cleanliness > 100) Cleanliness = 100;
-	};
-
-	~Tamagotchi() {
-		printf("\ncheck object");
-	};
-
+Tamagotchi::Tamagotchi(uint8_t health, uint8_t satiety, uint8_t happiness, uint8_t cleanliness){
+	this->health = health;
+	this->satiety = satiety;
+	this->happiness = happiness;
+	this->cleanliness = cleanliness;
 };
 
-int main()
-{
-	Tamagotchi tam(99, 50, 50, 50);
-	tam.getter();
-	tam.feed();
-	tam.heal();
-	tam.wash();
-	tam.play();
-	tam.getter();
-}
+uint8_t Tamagotchi::getHealth() const{
+	return health;
+	};
+
+uint8_t Tamagotchi::getSatiety() const{
+	return satiety;
+};
+	
+uint8_t Tamagotchi::getHappiness() const{
+		return happiness;
+};
+	
+uint8_t Tamagotchi::getCleanliness() const{
+	return cleanliness;
+};
+
+void Tamagotchi::printStats() const{
+	printf("Health = %3d Satiety = %3d Happiness = %3d Cleanliness = %3d\n", getHealth(), getSatiety(), getHappiness(), getCleanliness());
+};
+
+void Tamagotchi::feed() {
+	satiety += 3;
+	cleanliness -= 10;
+
+	if (satiety > 100) satiety = 100;
+};
+
+void Tamagotchi::heal() {
+	health += 5;
+	if (health > 100) health = 100;
+};
+
+void Tamagotchi::play() {
+	happiness += 5;
+	satiety -= 15;	
+	if (happiness > 100) happiness = 100;
+};
+
+void Tamagotchi::wash() {
+	happiness -= 3; cleanliness += 25;
+	if (cleanliness > 100) cleanliness = 100;
+};
+
+bool Tamagotchi::isDead() const{
+	return health == 0;
+};
+
+bool Tamagotchi::hasEscaped() const{
+	return happiness == 0;
+};
+
+
 

@@ -1,18 +1,16 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "e:\\projects\\tamagotchi\\tamagotchi\\tamagotchi\\tamagotchi.cpp",
+        "Source": "e:\\projects\\tamagotchi\\tamagotchi\\tamagotchi\\gameprocess.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\cstdint",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\iostream",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\yvals_core.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\vcruntime.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\sal.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\concurrencysal.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\vadefs.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\xkeycheck.h",
-            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\stdint.h",
-            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\iostream",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\istream",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\__msvc_ostream.hpp",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\ios",
@@ -43,6 +41,8 @@
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\intrin0.inl.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\type_traits",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\cstddef",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\cstdint",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\stdint.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\cstdio",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\stdio.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\corecrt_wstdio.h",
@@ -128,7 +128,7 @@
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\clocale",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\locale.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\ostream",
-            "e:\\projects\\tamagotchi\\tamagotchi\\tamagotchi\\tamagotchi.h"
+            "e:\\projects\\tamagotchi\\tamagotchi\\tamagotchi\\gameprocesse.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
