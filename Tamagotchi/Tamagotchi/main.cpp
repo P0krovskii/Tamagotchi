@@ -13,10 +13,12 @@ int main()
 	SetConsoleCP(CP_UTF8);
 
 	//проверка сохранений если нет создать обьект с базовыми хар
+	
 	Tamagotchi tam(99, 50, 50, 50);
 	GameProcess game(tam);
 	game.startGame();
 	game.endGame();
+
 	//GameProcess save(tam);
 
 }

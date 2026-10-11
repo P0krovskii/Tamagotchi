@@ -33,33 +33,46 @@ void GameProcess::checkKey(int key) {
 };
 
 void GameProcess::startGame() {
-	printf("game start\n");
-	tamagotchi.printStats();
-
 	int GameKey = 0;
+	printf("\t\t\tTAMAGOTCHI\n");
+	cout << "\t\tНажмите Esc для выхода" << endl;
 	while (GameKey != 27) {
-		printf("\t\t\tTAMAGOTCHI\n");
-		cout << "\t\tНажмите Esc для выхода" << endl;
 		GameKey = _getch();
 		if (GameKey != 27) {
-			checkKey(GameKey);
 			tamagotchi.printStats();
+			checkKey(GameKey);
+			if (!checkTamState()) {
+				break;
+			}
 		}
 		else { break; };
 	};
-
-};
-
-void GameProcess::endGame() {
-	printf("END GAME SESSION\n");
 };
 
 void GameProcess::saveGame() {
 	printf("dont forget to make save!!!");
 };
 
+void GameProcess::endGame() {
+	printf("\t\t  END GAME SESSION\n");
+};
+
 
 //Tamagotchi 
+
+bool GameProcess::checkTamState() {
+	if (tamagotchi.hasEscaped()) {
+		printf("\n\t\tВаш тамагочи убежал!\n\t\t ВЫ СКУЧНЫЙ ХОЗЯИН!\n\n");
+		return false;
+	};
+	if (tamagotchi.isDead()) {
+		printf("\n\t\tВаш тамагочи умер!\n\t\tВЫ ПЛОХОЙ ХОЗЯИН!\n\n");
+		return false;
+	};
+	
+	return true;
+};
+
 void GameProcess::feedTam() {
 	tamagotchi.feed();
 };

@@ -18,7 +18,7 @@ uint8_t Tamagotchi::getSatiety() const{
 };
 	
 uint8_t Tamagotchi::getHappiness() const{
-		return happiness;
+	return happiness;
 };
 	
 uint8_t Tamagotchi::getCleanliness() const{
@@ -30,25 +30,22 @@ void Tamagotchi::printStats() const{
 };
 
 void Tamagotchi::feed() {
-	satiety += 3;
-	cleanliness -= 10;
-
+	satiety += 10; cleanliness -= 10;
 	if (satiety > 100) satiety = 100;
 };
 
 void Tamagotchi::heal() {
-	health += 5;
+	health += 10;
 	if (health > 100) health = 100;
 };
 
 void Tamagotchi::play() {
-	happiness += 5;
-	satiety -= 15;	
+	happiness += 10; satiety -= 10;	
 	if (happiness > 100) happiness = 100;
 };
 
 void Tamagotchi::wash() {
-	happiness -= 3; cleanliness += 25;
+	happiness -= 10; cleanliness += 10;
 	if (cleanliness > 100) cleanliness = 100;
 };
 

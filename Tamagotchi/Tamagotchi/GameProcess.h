@@ -12,6 +12,8 @@ public:
 	void saveGame();
 	void endGame();
 
+	bool checkTamState();
+
 	void feedTam();
 	void healTam();
 	void playTam();
