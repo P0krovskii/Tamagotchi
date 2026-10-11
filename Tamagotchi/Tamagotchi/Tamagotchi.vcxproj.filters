@@ -18,18 +18,24 @@
     <ClCompile Include="Tamagotchi.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="gameProcess.cpp">
+    <ClCompile Include="GameProcess.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="GameUI.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameProcesse.h">
+    <ClInclude Include="GameProcess.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Tamagotchi.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="GameUI.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

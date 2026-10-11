@@ -139,12 +139,14 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="gameProcess.cpp" />
+    <ClCompile Include="GameProcess.cpp" />
+    <ClCompile Include="GameUI.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Tamagotchi.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameProcesse.h" />
+    <ClInclude Include="GameProcess.h" />
+    <ClInclude Include="GameUI.h" />
     <ClInclude Include="Tamagotchi.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
