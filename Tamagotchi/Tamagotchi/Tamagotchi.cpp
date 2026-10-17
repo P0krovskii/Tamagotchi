@@ -11,7 +11,7 @@ Tamagotchi::Tamagotchi(uint8_t health, uint8_t satiety, uint8_t happiness, uint8
 
 uint8_t Tamagotchi::getHealth() const{
 	return health;
-	};
+};
 
 uint8_t Tamagotchi::getSatiety() const{
 	return satiety;
