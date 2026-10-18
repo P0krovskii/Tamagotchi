@@ -6,6 +6,6 @@
 
 class Food : public Item {
 public:
-	Food(std::string nameItem, std::string properties, uint8_t price);
+	Food(uint8_t itemId, std::string nameItem, std::string properties, uint8_t price);
 	void use() override;
 };

@@ -7,10 +7,11 @@
 
 using namespace std;
 
-GameProcess::GameProcess(Tamagotchi& tam, Wallet& wal) //konstr
-	:tamagotchi(tam), wallet(wal)
+GameProcess::GameProcess(Tamagotchi& tam, Wallet& wal, GameUI& gameui) //konstr
+	:tamagotchi(tam), wallet(wal), gameui(gameui)
 {
 }
+
 
 
 //Gameplay
@@ -35,11 +36,12 @@ void GameProcess::checkKey(int key) {
 
 void GameProcess::startGame() {
 	int GameKey = 0;
-	printf("\t\t\tTAMAGOTCHI\n");
-	cout << "\t\tНажмите Esc для выхода" << endl;
+	gameui.printLogo();
 	while (GameKey != 27) {
 		GameKey = _getch();
 		if (GameKey != 27) {
+			gameui.outputDelay();
+			gameui.rebrashConsole();
 			tamagotchi.printStats();
 			wallet.printBalance();
 			checkKey(GameKey);

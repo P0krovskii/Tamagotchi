@@ -6,6 +6,6 @@
 
 class Medicine : public Item {
 public:
-	Medicine(std::string nameItem, std::string properties, uint8_t price);
+	Medicine(uint8_t itemId, std::string nameItem, std::string properties, uint8_t price);
 	void use();
 };

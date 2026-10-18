@@ -6,20 +6,20 @@
 #include "Wallet.h"
 #include "Tamagotchi.h"
 #include "GameProcess.h"
-
+#include "GameUI.h"
 
 int main()
 {
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
 
-	SetConsoleOutputCP(CP_UTF8);
-	SetConsoleCP(CP_UTF8);
+    GameUI gameUI{};
+    Wallet wallet(50);
+    Tamagotchi tam(99, 50, 50, 50);
+    GameProcess game(tam, wallet, gameUI);
 
-	Wallet wallet(50);
-	Tamagotchi tam(99, 50, 50, 50);
-	GameProcess game(tam, wallet);
-	game.startGame();
-	game.endGame();
+    game.startGame();
+    game.endGame();
 
-
-
+    return 0;
 }

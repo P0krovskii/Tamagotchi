@@ -3,10 +3,15 @@
 #include <cstdint>
 #include "Item.h"
 
-Item::Item(std::string nameItem, std::string properties, uint8_t price) {
+Item::Item(uint8_t itemId, std::string nameItem, std::string properties, uint8_t price) {
+	this->itemId = itemId;
 	this->nameItem = nameItem;
 	this->properties = properties;
 	this->price = price;
+};
+
+uint8_t Item::getItemId() const {
+	return itemId;
 };
 
 std::string Item::getNameItem() const{

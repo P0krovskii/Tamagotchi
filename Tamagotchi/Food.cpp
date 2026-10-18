@@ -3,8 +3,8 @@
 #include <cstdint>
 #include "Food.h"
 
-Food::Food(std::string nameItem, std::string properties, uint8_t price)
-	:Item(nameItem, properties, price)
+Food::Food(uint8_t itemId, std::string nameItem, std::string properties, uint8_t price)
+	:Item(itemId, nameItem, properties, price)
 {
 };
 

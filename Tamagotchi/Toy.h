@@ -7,6 +7,6 @@
 
 class Toy : public Item {
 public:
-	Toy(std::string nameItem, std::string properties, uint8_t price);
+	Toy(uint8_t itemId, std::string nameItem, std::string properties, uint8_t price);
     void use();
 };

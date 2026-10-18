@@ -1,10 +1,13 @@
 #pragma once
 #include <iostream>
 
+
+
 class Inventory {
+private:
+
 public:
 
-private:
 	void addItem();
 	void removeItem();
 	void getItemCount();

@@ -7,12 +7,14 @@
 //FOOD ITEMS
 
 Food apple{
+	1,
 	"Яблоко",
 	"Восполняет сытость + 5",
 	5
 };
 
 Food banana{
+	2,
 	"Банан",
 	"Восполняет сытость + 6",
 	6
@@ -22,6 +24,7 @@ Food banana{
 //TOY ITEMS
 
 Toy ball{
+	3,
 	"Мячик",
 	"Восполняет счастье + 10",
 	10
@@ -30,6 +33,7 @@ Toy ball{
 //MEDICINE ITEMS
 
 Medicine firstAidKit{
+	4,
 	"Аптечка",
 	"Восполняет здоровье + 6",
 	6

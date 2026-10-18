@@ -4,8 +4,8 @@
 #include "Toy.h"
 
 
-Toy::Toy(std::string nameItem, std::string properties, uint8_t price)
-	: Item(nameItem, properties, price)
+Toy::Toy(uint8_t itemId, std::string nameItem, std::string properties, uint8_t price)
+	: Item(itemId, nameItem, properties, price)
 {
 }
 
