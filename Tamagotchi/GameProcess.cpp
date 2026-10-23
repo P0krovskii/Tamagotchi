@@ -7,15 +7,12 @@
 
 using namespace std;
 
-GameProcess::GameProcess(Tamagotchi& tam, Wallet& wal, GameUI& gameui) //konstr
-	:tamagotchi(tam), wallet(wal), gameui(gameui)
+GameProcess::GameProcess(Tamagotchi& tam, Wallet& wal, GameUI& gameui, Magazine& magazine, Inventory& inventory) //konstr
+	:tamagotchi(tam), wallet(wal), gameui(gameui), magazine(magazine), inventory(inventory)
 {
 }
 
-
-
 //Gameplay
-
 void GameProcess::checkKey(int key) {
 	switch (key) {
 	case '1':
@@ -30,12 +27,20 @@ void GameProcess::checkKey(int key) {
 	case '4':
 		washTam();
 		break;
+	case 'M':
+		magazine.openMagazine(wallet.getBalance());
+		break;
+	case 'I':
+		inventory.openInventory();
+		break;
 	//default:
 	};
 };
 
 void GameProcess::startGame() {
+	magazine.createAssortment();
 	int GameKey = 0;
+	wallet.takeMoney(50);
 	gameui.printLogo();
 	while (GameKey != 27) {
 		GameKey = _getch();
@@ -63,7 +68,18 @@ void GameProcess::endGame() {
 
 
 //Wallet
+bool GameProcess::buyItem(uint8_t itemId) {
+	Item* item = magazine.buyItem(itemId, wallet.getBalance());
 
+	if (item == nullptr) {
+		return false;
+	}
+
+	wallet.giveMoney(item->getPrice());
+	inventory.addItem(item);
+
+	return true;
+}
 
 //Tamagotchi 
 
@@ -95,3 +111,4 @@ void GameProcess::playTam() {
 void GameProcess::washTam() {
 	tamagotchi.wash();
 };
+

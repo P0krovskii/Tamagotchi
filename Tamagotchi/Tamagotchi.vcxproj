@@ -145,6 +145,7 @@
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="ItemCatalog.cpp" />
+    <ClCompile Include="Magazine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Medicine.cpp" />
     <ClCompile Include="Tamagotchi.cpp" />
@@ -158,6 +159,7 @@
     <ClInclude Include="GameUI.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="Magazine.h" />
     <ClInclude Include="Medicine.h" />
     <ClInclude Include="Tamagotchi.h" />
     <ClInclude Include="Toy.h" />
